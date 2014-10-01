@@ -37,7 +37,7 @@ Next, load the image into Mesos via a POST to Marathon:
 curl -X POST -H "Content-Type: application/json" localhost:8080/v2/apps -d@activemq.json
 
 It should return something like this:
-
+```javascript
 {
     "args": null,
     "backoffFactor": 1.15,
@@ -73,6 +73,6 @@ It should return something like this:
     "user": null,
     "version": "2014-10-01T17:39:12.134Z"
 }
-
+```
 
 
