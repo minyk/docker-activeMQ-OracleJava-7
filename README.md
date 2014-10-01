@@ -6,7 +6,7 @@ Good Docker container with Apache Active MQ installed. Also has Oracle Java 7.
 This activemq image can be loaded into Mesos. 
 
 Load this json file as a Docker image:
-json,,,
+```javascript
 {
     "container": {
         "docker": {
@@ -26,7 +26,7 @@ json,,,
     ],
     "uris": []
 } 
-,,,
+```
 To load into Mesos via Marathon. First check that Marthon is running:
 ps aux|grep -i marathon
 
