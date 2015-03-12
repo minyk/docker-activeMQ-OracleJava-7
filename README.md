@@ -1,18 +1,23 @@
-docker-activeMQ-OracleJava-7
+docker-activeMQ-OracleJava-7 -- Contains JSON for Mesos Docker task creation
 ============================
 
-Good Docker container with Apache Active MQ installed. Also has Oracle Java 7.
+MQ info:
+console login: <containerIPAddress>:8161/admin/ 
+username:admin
+password:admin
+
+Good Docker container with Apache Active MQ installed. Oracle Java 7 installed. 
+
 To run the image and connect to it:
 docker run -d --name amq granthbr/docker-activemq-oraclejava-7
-Connecting to the management GUI: 
-localhost:8161
-Ports that need to be open are listed in the Docker file.
+
+Ports that needs to be open are listed in the Docker file.
 The start command with parameters is the last line of the Dockerfile.
 
 This activemq image can be loaded into Mesos. 
 
 Load this json file as a Docker image:
-```javascript
+```
 {
     "container": {
         "docker": {
