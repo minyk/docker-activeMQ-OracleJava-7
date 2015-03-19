@@ -50,6 +50,7 @@ file:${activemq.base}/conf/credentials.properties
 <transportConnectors>
 <!-- Client connections -->
 <transportConnector name="openwire-clients" uri="tcp://0.0.0.0:61616" discoveryUri="multicast://default?group=client" enableStatusMonitor="true" updateClusterClients="true" updateClusterClientsOnRemove="true" rebalanceClusterClients="true"/>
+<transportConnector name="stomp" uri="stomp://0.0.0.0:61613" discoveryUri="multicast://default?group=client" enableStatusMonitor="true" updateClusterClients="true" updateClusterClientsOnRemove="true" rebalanceClusterClients="true"/>
 <!-- Broker connections -->
 <transportConnector name="openwire-brokers" uri="tcp://0.0.0.0:61617" discoveryUri="multicast://default?group=broker" enableStatusMonitor="true" updateClusterClients="true" updateClusterClientsOnRemove="true" rebalanceClusterClients="true"/>
 </transportConnectors>
