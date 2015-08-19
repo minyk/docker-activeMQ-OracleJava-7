@@ -13,6 +13,7 @@ To run the image and connect to it:
 docker run -d --name amq granthbr/docker-activemq-oraclejava-7 
 
 Run with static ports and an external config file
+
 `docker run -d --name amq -p 8161:8161 -p 61616:61616 -p 61613:61613 -p 61617:61617 -v `pwd`/conf:/opt/activemq/conf granthbr/docker-activemq-oraclejava-7`
 
 
