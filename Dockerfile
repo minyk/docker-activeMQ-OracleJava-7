@@ -1,6 +1,4 @@
-FROM      java
- 
-MAINTAINER Brandon Grantham <brandon.grantham@gmail.com>
+FROM      openjdk:8
 
 RUN        apt-get update && \ 
            apt-get upgrade -y && \
@@ -9,9 +7,9 @@ RUN        apt-get update && \
            apt-get -y install curl telnet vim inetutils-ping 
 WORKDIR    /opt
 
-RUN 	   curl -LO http://apache.mirrors.ovh.net/ftp.apache.org/dist/activemq/5.14.0/apache-activemq-5.14.0-bin.tar.gz && \
-           tar zxvf apache-activemq-5.14.0-bin.tar.gz && \
-           ln -sf /opt/apache-activemq-5.14.0 /opt/activemq && \
+RUN 	   curl -LO http://mirror.apache-kr.org/activemq/5.14.5/apache-activemq-5.14.5-bin.tar.gz && \
+           tar zxvf apache-activemq-5.14.5-bin.tar.gz && \
+           ln -sf /opt/apache-activemq-5.14.5 /opt/activemq && \
            ln -sf /opt/activemq/bin/activemq /etc/init.d/ && \
            update-rc.d activemq defaults && \
            /etc/init.d/activemq setup /etc/default/activemq
